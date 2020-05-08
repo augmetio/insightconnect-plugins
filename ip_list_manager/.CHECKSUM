@@ -1,0 +1,31 @@
+{
+	"spec": "dde81c00656663c2a1346a37360717b3",
+	"manifest": "79f5734206177c6388f4e1b3e2d9a789",
+	"setup": "b6a42be6ab6d53a64c97df8d59b01bd7",
+	"schemas": [
+		{
+			"identifier": "add_ip_to_list/schema.py",
+			"hash": "7a26a78d424aeaac0ee81eaabb509e83"
+		},
+		{
+			"identifier": "check_if_ip_is_in_list/schema.py",
+			"hash": "c87c3df41674caf96f281c2739b39f2a"
+		},
+		{
+			"identifier": "clear_ip_list/schema.py",
+			"hash": "9c463911291789f45c0acb3351787cf1"
+		},
+		{
+			"identifier": "get_ip_list/schema.py",
+			"hash": "fbfba0c7cc9c30990673c2ccb090439b"
+		},
+		{
+			"identifier": "remove_ip_from_list/schema.py",
+			"hash": "be8ba787d98a4ec45e92daf48d5bb442"
+		},
+		{
+			"identifier": "connection/schema.py",
+			"hash": "da5382221ca2a33a2f854e17b068d502"
+		}
+	]
+}

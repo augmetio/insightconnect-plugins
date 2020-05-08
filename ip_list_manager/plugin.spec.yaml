@@ -1,0 +1,89 @@
+plugin_spec_version: v2
+extension: plugin
+products: [insightconnect]
+name: ip_list_manager
+title: IP List Manager
+description: Manage whitelists or blacklists of IPs
+version: 1.0.0
+vendor: rapid7
+support: community
+status: []
+resources:
+  source_url: https://github.com/rapid7/insightconnect-plugins/tree/master/ip_list_manager
+  license_url: https://github.com/rapid7/insightconnect-plugins/blob/master/LICENSE
+tags:
+- ip
+- list
+- utilities
+hub_tags:
+  use_cases: [data_utility]
+  keywords: [ip, list, manager, utilities]
+  features: []
+actions:
+  add_ip_to_list:
+    title: Add IP to List
+    description: Add an IP or CIDR to a stored list of IP addresses
+    input:
+      ip_address:
+        title: IP Address
+        type: string
+        description: IP or CIDR to store
+        required: true
+        example: 1.1.1.1
+    output:
+      ip_address:
+        title: IP Address
+        description: IP address that was stored
+        type: string
+        required: true
+  get_ip_list:
+    title: Get IP List
+    description: Gets the managed IP list from this plugin
+    output:
+      ip_list:
+        title: IP List
+        description: List of IP and CIDR addresses stored in this plugin
+        type: "[]string"
+        required: true
+  clear_ip_list:
+    title: Clear IP List
+    description: Removes all IPs in the IP list managed by this plugin
+    output:
+      success:
+        title: Success
+        description: success
+        type: boolean
+        required: true
+  remove_ip_from_list:
+    title: Remove IP from List
+    description: Remove an IP or CIDR from the list managed by this plugin
+    input:
+      ip_address:
+        title: IP Address
+        type: string
+        description: IP or CIDR to store
+        required: true
+        example: 1.1.1.1
+    output:
+      success:
+        title: Success
+        description: Was operation successful
+        type: boolean
+        required: true
+  check_if_ip_is_in_list:
+    title: Check If IP Is in List
+    description: Check if a given IP is included in any of the IPs or CIDR addresses managed by this plugin
+    input:
+      ip_address:
+        title: IP Address
+        description: IP Address to check
+        type: string
+        required: true
+        example: 1.1.1.1
+    output:
+      is_in_list:
+        title: Is in List
+        description: Is the IP in the list
+        type: boolean
+        required: true
+
