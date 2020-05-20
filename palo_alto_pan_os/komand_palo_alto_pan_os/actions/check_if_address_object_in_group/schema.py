@@ -4,7 +4,7 @@ import json
 
 
 class Component:
-    DESCRIPTION = "Checks to see if an IP, CIDR, or domain is in an Address Group"
+    DESCRIPTION = "Checks to see if an IP address, CIDR IP address, or domain is in an Address Group"
 
 
 class Input:
@@ -97,6 +97,7 @@ class CheckIfAddressObjectInGroupOutput(komand.Output):
     }
   },
   "required": [
+    "address_objects",
     "found"
   ]
 }

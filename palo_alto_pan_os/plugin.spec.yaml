@@ -790,7 +790,7 @@ actions:
         title: Address Objects
         description: The names of the address objects that match or contain address
         type: "[]string"
-        required: false
+        required: true
   remove_address_object_from_group:
     title: Remove Address Object from Group
     description: Removes an address object from an address group

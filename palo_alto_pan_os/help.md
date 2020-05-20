@@ -55,7 +55,7 @@ This action adds an address object to an address group.
 
 |Name|Type|Default|Required|Description|Enum|Example|
 |----|----|-------|--------|-----------|----|-------|
-|address_object|string|None|True|The name of the address object to add|None|Malicious IP address|
+|address_object|string|None|True|The name of the address object to add|None|Malicious IP|
 |device_name|string|localhost.localdomain|True|Device name|None|localhost.localdomain|
 |group|string|None|True|Group name|None|ICON Block List|
 |virtual_system|string|vsys1|True|Virtual system name|None|vsys1|
@@ -75,7 +75,7 @@ Example input:
 
 |Name|Type|Required|Description|
 |----|----|--------|-----------|
-|address_objects|[]string|True|Address Objects currently in group|
+|address_objects|[]string|True|Address objects currently in group|
 |success|boolean|True|Was operation successful|
 
 Example output:
@@ -121,7 +121,7 @@ Example input:
 
 |Name|Type|Required|Description|
 |----|----|--------|-----------|
-|address_objects|[]string|False|The names of the address objects that match or contain address|
+|address_objects|[]string|True|The names of the address objects that match or contain address|
 |found|boolean|True|Was address found in group|
 
 Example output:
@@ -189,11 +189,6 @@ This action is used to get a policy.
 Example input:
 
 ```
-{
-  "device_name": "localhost.localdomain",
-  "policy_name": "InsightConnect Block Policy",
-  "virtual_system": "vsys1"
-}
 ```
 
 ##### Output
